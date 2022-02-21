@@ -51,7 +51,7 @@ class SplashScreen extends StatelessWidget {
                     height: 40,
                     child: Center(
                       child: Text(
-                        "Lets Go!",
+                        "Lets Go! ",
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
