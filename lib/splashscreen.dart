@@ -33,6 +33,7 @@ class SplashScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
+                    margin: EdgeInsets.only(top: 8),
                     child: Center(
                       child: Text(
                         'Adopt A Pet Today',
