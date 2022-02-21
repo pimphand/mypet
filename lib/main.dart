@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mypet/home.dart';
+import 'package:mypet/register.dart';
 import 'package:mypet/splashscreen.dart';
 
 void main() {
@@ -16,7 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      routes: {
+        '/': (context) => SplashScreen(),
+        '/register': (context) => Register(),
+        '/home': (context) => Home(),
+      },
     );
   }
 }

@@ -50,14 +50,19 @@ class SplashScreen extends StatelessWidget {
                     margin: EdgeInsets.only(top: 30),
                     width: 148,
                     height: 40,
-                    child: Center(
-                      child: Text(
-                        "Lets Go! ",
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: GoogleFonts.montserrat().fontFamily,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/register');
+                      },
+                      child: Center(
+                        child: Text(
+                          "Lets Go! ",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: GoogleFonts.montserrat().fontFamily,
+                          ),
                         ),
                       ),
                     ),
