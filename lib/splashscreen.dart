@@ -46,14 +46,14 @@ class SplashScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(top: 30),
-                    width: 148,
-                    height: 40,
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/register');
-                      },
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/register');
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(top: 30),
+                      width: 148,
+                      height: 40,
                       child: Center(
                         child: Text(
                           "Lets Go! ",
@@ -65,10 +65,10 @@ class SplashScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ),
-                    decoration: BoxDecoration(
-                      color: Color(0xffFFB228),
-                      borderRadius: BorderRadius.circular(20),
+                      decoration: BoxDecoration(
+                        color: Color(0xffFFB228),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                     ),
                   ),
                 ],

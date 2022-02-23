@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mypet/product.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -264,76 +265,32 @@ class _HomeState extends State<Home> {
       );
     }
 
-    Widget product() {
+    Widget products() {
       return SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Row(
-          children: [
-            Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(
-                    top: 24,
-                    left: 20,
-                    right: 20,
-                  ),
-                  height: 171,
-                  width: 350,
-                  child: Row(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/dog.png'),
-                        height: 171,
-                        width: 173,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'Diko',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: GoogleFonts.montserrat().fontFamily,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
-                    ),
-                    color: Color(0xffDFFB228),
-                  ),
-                ),
-              ],
-            ),
-          ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Product(),
+              Product(),
+            ],
+          ),
         ),
       );
     }
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          height: size.height,
-          color: Color(0xffDF0054),
-          child: Column(
-            children: [
-              header(),
-              search(),
-              categories(),
-              product(),
-            ],
-          ),
+      body: Container(
+        // height: size.height,
+        color: Color(0xffDF0054),
+        child: Column(
+          children: [
+            header(),
+            search(),
+            categories(),
+            products(),
+          ],
         ),
       ),
     );

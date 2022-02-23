@@ -192,14 +192,14 @@ class Register extends StatelessWidget {
     }
 
     Widget button() {
-      return Container(
-        margin: EdgeInsets.only(top: 30),
-        width: 228,
-        height: 59,
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/home');
-          },
+      return GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/home');
+        },
+        child: Container(
+          margin: EdgeInsets.only(top: 30),
+          width: 228,
+          height: 59,
           child: Center(
             child: Text(
               "Lets Go! ",
@@ -211,10 +211,10 @@ class Register extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        decoration: BoxDecoration(
-          color: Color(0xffFF8B6A),
-          borderRadius: BorderRadius.circular(20),
+          decoration: BoxDecoration(
+            color: Color(0xffFF8B6A),
+            borderRadius: BorderRadius.circular(20),
+          ),
         ),
       );
     }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mypet/botom_nav.dart';
 import 'package:mypet/home.dart';
+import 'package:mypet/product.dart';
 import 'package:mypet/register.dart';
 import 'package:mypet/splashscreen.dart';
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => SplashScreen(),
         '/register': (context) => Register(),
-        '/home': (context) => Home(),
+        '/home': (context) => Product(),
       },
     );
   }
